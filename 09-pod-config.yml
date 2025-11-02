@@ -1,0 +1,19 @@
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: pod-config
+spec:
+  containers:
+  - name: nginx
+    image:  nginx
+    env:
+      - name: ABC
+        valueFrom:
+          configMapKeyRef:
+            name: nginx-config
+            key: course
+      - name: BCD 
+        valueFrom:
+          configMapKeyRef:
+            name: nginx-config
+            key:  duration
