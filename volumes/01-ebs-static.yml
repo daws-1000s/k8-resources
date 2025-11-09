@@ -44,18 +44,18 @@ spec:
         claimName: ebs-static-claim
   nodeSelector:
     topology.kubernetes.io/zone: us-east-1f
----
-apiVersion: v1 
-kind: Service
-metadata:
-  name: nginx
-spec:
-  type: LoadBalancer
-  selector: 
-    purpose: ebs-static
-  ports:
-    - name: nginx-svc-port
-      protocol: TCP
-      port: 80
-      targetPort: 80
-      nodePort: 30007
+# ---
+# apiVersion: v1 
+# kind: Service
+# metadata:
+#   name: nginx
+# spec:
+#   type: LoadBalancer
+#   selector: 
+#     purpose: ebs-static
+#   ports:
+#     - name: nginx-svc-port
+#       protocol: TCP
+#       port: 80
+#       targetPort: 80
+#       nodePort: 30007
